@@ -1,6 +1,6 @@
 // React bootstrap
 import { Row, Col } from "react-bootstrap";
-
+import "../css/register.css";
 // Images
 import registerImg from "../images/register.png";
 
