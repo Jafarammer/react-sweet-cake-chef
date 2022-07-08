@@ -1,5 +1,7 @@
 import React from "react";
-import { Col, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+// import css
+import styles from "../../../css/register.module.css";
 
 const InputText = (props) => {
   const {
@@ -11,7 +13,7 @@ const InputText = (props) => {
     <>
       {/* <Col> */}
       {/* <Form className="form-register"> */}
-      <Form.Group className="mb-3 form-group-register">
+      <Form.Group className={`mb-3 ${styles.form_group_register}`}>
         <Form.Label>{labelInput}</Form.Label>
         <Form.Control
           type={typeInput}

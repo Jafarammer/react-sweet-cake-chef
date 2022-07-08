@@ -1,11 +1,14 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
+// import atom
 import InputText from "../atom/InputText";
+//import css
+import styles from "../../../css/register.module.css";
 
 const FormRegister = () => {
   return (
     <>
-      <Form className="form-register">
+      <Form className={styles.form_register}>
         {/* Name */}
         <InputText label="Name" type="text" placeholder="Name" />
         {/* Email */}
@@ -33,7 +36,7 @@ const FormRegister = () => {
           placeholder="Confirm password"
         />
         {/* Form check */}
-        <Form.Group className="mb-3 form-group-register">
+        <Form.Group className={`mb-3 ${styles.form_group_register}`}>
           <Form.Check
             type="checkbox"
             id="custom-checkbox"
@@ -41,17 +44,17 @@ const FormRegister = () => {
           />
         </Form.Group>
         {/* Button */}
-        <Form.Group className="mb-4 form-group-register">
+        <Form.Group className={`mb-4 ${styles.form_group_register}`}>
           <Button
             as="input"
             type="submit"
             value="Register Account"
-            className="btn-block btn-warning text-white mt-3 py-3 px-4"
+            className={`btn-warning text-white mt-3 py-3 px-4 ${styles.btn_register}`}
           />
         </Form.Group>
 
         <p className="text-secondary">
-          Already have account?{" "}
+          Already have account?
           <a href="#" className="text-warning">
             Log In Here
           </a>

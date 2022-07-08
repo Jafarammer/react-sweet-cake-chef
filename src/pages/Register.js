@@ -1,21 +1,19 @@
-// React bootstrap
 import { Row, Col } from "react-bootstrap";
-import "../css/register.css";
+// import css
+import styles from "../css/register.module.css";
 // Images
-import registerImg from "../images/register.png";
-
-// Organism
-import FormRegister from "../components/register/organism/FormRegister";
-
+import registerImg from "../images/home.png";
 // Molecules
 import TextHeader from "../components/register/molecules/TextHeader";
+// Organism
+import FormRegister from "../components/register/organism/FormRegister";
 
 function Register() {
   return (
     <div className="App">
       <Row>
-        <Col className="col">
-          <img src={registerImg} className="img-register" />
+        <Col>
+          <img src={registerImg} className={styles.img_register} />
         </Col>
         <Col>
           <TextHeader
