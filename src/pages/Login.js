@@ -4,11 +4,12 @@ import styles from "../css/login.module.css";
 import { Row, Col, Card } from "react-bootstrap";
 //images
 import loginImg from "../images/login.png";
+// import organism
 import FormLogin from "../components/login/organism/FormLogin";
 
 function Login() {
   return (
-    <div className="tes">
+    <>
       <Row>
         <Col>
           <img src={loginImg} className={styles.img_login} />
@@ -21,7 +22,7 @@ function Login() {
           </Card>
         </Col>
       </Row>
-    </div>
+    </>
   );
 }
 
