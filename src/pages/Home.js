@@ -19,8 +19,11 @@ import homeImg from "../images/pancake2.jpg";
 import homeImg2 from "../images/belgian.jpg";
 import homeImg3 from "../images/apple-pie3.jpg";
 import homeImg4 from "../images/apple-pie2.jpg";
-// component
-import CardImage from "../components/home/molecules/CardImage";
+// atom
+import NavLink from "../components/home/atom/NavLink";
+// organism
+import NavLeft from "../components/home/organism/NavLeft";
+import NavRight from "../components/home/organism/NavRight";
 // axios
 import axios from "axios";
 
@@ -34,29 +37,18 @@ function Home() {
 
   return (
     <>
+      {/* Navbar */}
       <Navbar
         bg="light"
         variant="light"
         className={`fixed-top px-5 ${styles.d_nav}`}
       >
-        {/* <Container fluid> */}
-
-        <Nav className={`me-auto px-5 py-3`}>
-          <Nav.Link href="#home" className="mx-5">
-            Home
-          </Nav.Link>
-          <Nav.Link href="/add" className="mx-5">
-            Add Recipe
-          </Nav.Link>
-          <Nav.Link href="#pricing" className="mx-5">
-            Profile
-          </Nav.Link>
-        </Nav>
-        <Nav className="d-flex justify-content-center">
-          <Nav.Link href="/login">Login</Nav.Link>
-        </Nav>
-        {/* </Container> */}
+        {/* Nav Left */}
+        <NavLeft />
+        {/* Nav Right */}
+        <NavRight />
       </Navbar>
+      {/* End Navbar */}
       {/* body */}
       <div className={styles.d_parent}>
         <Row>
