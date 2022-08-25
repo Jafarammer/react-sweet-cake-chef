@@ -1,26 +1,12 @@
 /* Form register */
-.img_register {
+.show_image {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  object-fit: inherit;
 }
-.form_register {
+.col {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0%;
+  justify-content: center;
 }
-.form_group_register {
-  width: 426px;
-}
-.btn_register {
-  width: 100%;
-  font-weight: bold;
-}
-.form_register a {
-  text-decoration: none;
-  margin-left: 5px;
-}
-/* .col {
-  height: 100vh;
-} */
-/* End Form Register */

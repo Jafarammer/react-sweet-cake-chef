@@ -1,4 +1,9 @@
-.btn_add_recipe {
-  width: 100%;
-  font-weight: bold;
+.content {
+  height: 100vh;
+  overflow: hidden;
+  border: 1px solid blue;
+}
+.content button {
+  padding: 0 6em;
+  align-items: center;
 }

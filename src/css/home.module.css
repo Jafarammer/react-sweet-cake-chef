@@ -1,166 +1,167 @@
-/* Navbar */
-.d_nav {
-  font-weight: bold;
-  font-size: 18px;
+.content {
+  height: 100vh;
+  overflow: hidden;
+  /* border: 1px solid blue; */
 }
 
-/* parent */
-.d_parent {
-  /* border: 1px solid red; */
-  position: absolute;
-  width: 1920px;
-  height: 1048px;
-  top: 74px;
+.heading_content {
+  height: 140px;
+  border-right: 12px solid;
 }
-.col_left {
-  height: 1048px;
+
+/* Header */
+.col_right_header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 132px;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  /* border: 1px solid red; */
 }
-.col_left p {
-  font-size: 4.5em;
-  font-weight: 500;
-  color: #5c3d2e;
-}
-.col_left span {
-  line-height: 72px;
-}
-.card_left {
-  width: 55%;
-}
-.col_right {
-  height: 1210px;
-}
-.card_style_img {
+.col_right_header div {
   position: absolute;
   width: 700px;
   height: 700px;
-  left: 1085px;
-  top: 276px;
   border-radius: 15px;
+  margin-left: -370px;
 }
-.card_style_img img {
-  border-radius: 15px;
+.col_right_header div img {
+  width: 100%;
   height: 100%;
-}
-.card_tes {
-  margin-top: 67.5em;
-  position: absolute;
-  width: 635px;
-  height: 140px;
-  left: 135px;
-}
-
-/* article */
-.d_article {
-  width: 1920px;
-  height: 100vh;
-  margin-bottom: 350px;
-}
-.card_img_article1 {
-  /* position: absolute; */
   border-radius: 15px;
-  top: 8em;
+  object-fit: cover;
+}
+.col_left_header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 37em 0 11em;
+  /* border: 1px solid green; */
+}
+.col_left_header p {
+  font-size: 4.5em;
+  font-weight: 500;
+  color: #5c3d2e;
+  line-height: 1.1em;
+}
+/*End Header */
+
+/* Populer for you */
+.card_article1 {
+  position: absolute;
   width: 683px;
   height: 801px;
-  left: 338px;
-}
-.card_img_article1 img {
+  margin-left: 10em;
   border-radius: 15px;
+}
+.card_article1 img {
   position: absolute;
   width: 830px;
   height: 830px;
-  right: 50px;
-  bottom: 50px;
+  margin-left: -13em;
+  margin-top: -70px;
+  object-fit: cover;
+  border-radius: 15px;
 }
-.box_article1 {
-  width: 570px;
-  height: 430px;
-  margin-bottom: 140px;
+.col_right_article1 {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.box_article1 h1 {
-  line-height: 73px;
-  font-weight: 500;
+.col_right_article1 h1 {
   font-size: 56px;
   color: #5c3d2e;
 }
-
-/* article 2 */
-.col_right_article2 {
-  height: 83vh;
-  display: flex;
-  align-items: center;
-  padding-top: 250px;
-  padding-right: 150px;
+.col_right_article1 p {
+  font-size: 24px;
+  line-height: 28px;
 }
-.card_style_img_article2 {
+.col_right_article1 button {
+  margin-right: 20em;
+}
+/* End populer for you */
+
+/* New recipe */
+.card_left_article2 {
+  position: absolute;
+  width: 480px;
+  height: 820px;
+}
+.card_left_article2 img {
   position: absolute;
   width: 800px;
   height: 800px;
   left: 135px;
   border-radius: 15px;
-  margin-top: 5em;
-}
-.card_style_img_article2 img {
   object-fit: cover;
-  height: 100%;
-  border-radius: 15px;
+}
+.col_right_article2 {
+  height: 69vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 30em;
 }
 .col_right_article2 h1 {
   font-size: 56px;
+  color: #5c3d2e;
 }
-
 .col_right_article2 p {
   font-size: 24px;
+  line-height: 28px;
 }
+.col_right_article2 button {
+  margin-right: 20em;
+}
+/* End new recipe */
 
-/* article 3 */
-.card_style_img_article3 {
-  width: 500px;
-  height: 500px;
-  border-radius: 15px;
+/* Populer recipe */
+.row_heading_article3 {
+  margin-top: 15em;
 }
-.card_style_img_article3 img {
-  object-fit: cover;
-  height: 100%;
-  border-radius: 15px;
+.container_card {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.card_style_img_article3 p {
-  position: absolute;
-  font-size: 32px;
-  top: 12.5em;
+.card_article3 {
+  width: 20rem;
+  height: 15rem;
 }
-.row_article3 {
+.card_article3 img {
   width: 100%;
-  margin: 0;
-  padding: 0 140px;
+  height: 100%;
+  object-fit: cover;
 }
+.card_article3 p {
+  position: absolute;
+}
+/* End pupuler recipe */
 
 /* Footer */
 .d_footer {
-  width: 1920px;
   height: 685px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 150px 0;
+  padding-top: 10em;
 }
 .d_footer h1 {
   font-size: 72px;
-  font-weight: 400;
   color: #5c3d2e;
 }
 .d_footer p {
   font-size: 24px;
-  font-weight: 400;
+  margin-top: 50px;
 }
-.row_footer {
-  width: 500px;
-  margin-top: 15em;
+.list_footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 10em;
 }
-.row_footer p {
-  font-size: 16px;
-  font-weight: 400;
-}
+/* End footer */

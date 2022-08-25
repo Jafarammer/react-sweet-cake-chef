@@ -5,8 +5,8 @@ const TextHeader = (props) => {
   const { title, desc } = props;
   return (
     <>
-      <h2 className="text-center mt-5 text-warning">{title}</h2>
-      <p className="text-center mt-4 mb-5 text-secondary">{desc}</p>
+      <h1 className="text-warning text-center mb-4">{title}</h1>
+      <p className="text-center text-muted mb-5">{desc}</p>
     </>
   );
 };

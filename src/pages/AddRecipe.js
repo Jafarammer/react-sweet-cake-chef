@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Form, Button } from "react-bootstrap";
+// import { Container, Form, Button } from "react-bootstrap";
 import styles from "../css/addRecipe.module.css";
 // axios
 import axios from "axios";
@@ -31,65 +31,54 @@ function AddRecipe() {
         navigate("/");
       })
       .catch((err) => {
+        alert("failed upload");
         console.log(err);
       });
   };
-
-  const onInputFile = (e) => {
-    setFile(e.target.files[0]);
-  };
-
   return (
     <>
-      {/* <Form onSubmit={onFormSubmit}>
-        <Form.Control
-          type="file"
-          size="lg"
-          className="mb-5 py-3"
-          onChange={onInputChange}
-        />
-
-        <Button
-          variant="warning"
-          size="lg"
-          className={`py-3 text-white ${styles.btn_add_recipe}`}
-          type="submit"
-        >
-          Post
-        </Button>
-      </Form> */}
-      <Container className="px-5 py-5 my-5">
-        <Form onSubmit={onFormSubmit}>
-          <Form.Group controlId="formFileLg" className="mb-3 px-5 mx-5">
-            <Form.Control
+      <div className={styles.content}>
+        <div className="border container mt-5">
+          <form onSubmit={onFormSubmit}>
+            <input
+              className="form-control form-control-lg mb-3"
               type="file"
-              size="lg"
-              className="mb-5 py-3"
-              onChange={onInputFile}
+              id="formFile"
+              onChange={(e) => setFile(e.target.files[0])}
             />
-            <Form.Control
+            <input
               type="text"
-              size="lg"
+              class="form-control mb-3 py-3"
               placeholder="Title"
-              className="mb-5 py-3"
               onChange={(e) => setTitle_recipe(e.target.value)}
             />
-            <textarea
-              className="form-control mb-5 py-3"
-              rows="8"
-              onChange={(e) => setIngredients(e.target.value)}
-            ></textarea>
-            <Button
-              variant="warning"
-              size="lg"
-              className={`py-3 text-white ${styles.btn_add_recipe}`}
-              type="submit"
-            >
-              Post
-            </Button>
-          </Form.Group>
-        </Form>
-      </Container>
+            <div className="form-floating mb-3">
+              <textarea
+                className="form-control"
+                style={{ height: "200px" }}
+                id="floatingTextarea2"
+                placeholder="Leave a comment here"
+                onChange={(e) => setIngredients(e.target.value)}
+              ></textarea>
+              <label for="floatingTextarea2">Igredients</label>
+            </div>
+            <input
+              className="form-control form-control-lg mb-5"
+              type="file"
+              id="formFile"
+              disabled
+            />
+            <div className="text-center">
+              <button
+                className="btn btn-warning text-white fw-bold py-2 mt-4"
+                type="submit"
+              >
+                Post
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </>
   );
 }

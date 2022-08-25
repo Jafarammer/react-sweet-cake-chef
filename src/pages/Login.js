@@ -1,27 +1,30 @@
-// css
+import React from "react";
 import styles from "../css/login.module.css";
-// react bootstrap
-import { Row, Col, Card } from "react-bootstrap";
-//images
 import loginImg from "../images/login.png";
-// import organism
-import FormLogin from "../components/login/organism/FormLogin";
+// molecules
+import TextHeader from "../components/molecules/TextHeader";
+// organism
+import FormLogin from "../components/organism/FormLogin";
 
 function Login() {
   return (
     <>
-      <Row>
-        <Col>
-          <img src={loginImg} className={styles.img_login} />
-        </Col>
-        <Col className={styles.col_right}>
-          <Card className="d-flex justify-content-center border-0">
-            {/* Form */}
-            <FormLogin />
-            {/* End Form */}
-          </Card>
-        </Col>
-      </Row>
+      <div className="overflow-hidden p-0 m-0">
+        <div className="row">
+          <div className={`col-6 px-5 border ${styles.col}`}>
+            <TextHeader
+              title="Welcome"
+              desc="Log in into your exiting account"
+            />
+            <div className="card border-0 px-5">
+              <FormLogin />
+            </div>
+          </div>
+          <div className={`col-6 px-0 ${styles.col}`}>
+            <img src={loginImg} className={styles.show_image} />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
